@@ -25,8 +25,17 @@ app.get('/favorite-foods', (req, res) => {
     favoriteFoods: favoriteFoods
   })
 });
+app.get('/math/:operator', (req, res) => {
+    
 
-const PORT = 3000;
+  res.render('opertator',{
+    math: rew.query.math
+  })
+      
+});
+
+
+const PORT = 3001;
 
 app.listen(PORT, () => {
   console.log("Express is listening on port ", PORT);
